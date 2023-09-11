@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func Soma(lista []int, alvo int) (int, int) {
+    esquerda, direita := 0, len(lista)-1
+
+    for esquerda < direita {
+        soma := lista[esquerda] + lista[direita]
+
+        if soma == alvo {
+            return lista[esquerda], lista[direita]
+        } else if soma < alvo {
+            esquerda++
+        } else {
+            direita--
+        }
+    }
+    return -1, -1
+}
+func main() {
+    lista := []int{1, 2, 3, 4, 5}
+    alvo := 7
+ fmt.Print(Soma(lista,alvo))
+}
