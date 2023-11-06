@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-
+// IVO LAVACEK E PEDRO LUSTOSA
 type no struct {
 	valor    int
 	esquerda *no
